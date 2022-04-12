@@ -19,4 +19,4 @@ jobs:
           fetch-depth: 0
 
       - name: Echo Version
-        run: echo "v1.7.30" | tr v 
+        run: echo "v1.7.30" | sed -r 's/[v]+//g'
