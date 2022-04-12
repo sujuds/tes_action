@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: "Get Tag Number"
-        run: echo ::set-output name=VERSION::$("v1.7.30" | sed -r 's/[v]+//g')
+        run: echo ::set-output name=VERSION::$(echo "v1.7.30" | sed -r 's/[v]+//g')
         id: get_version
 
       - name: Echo ENV
