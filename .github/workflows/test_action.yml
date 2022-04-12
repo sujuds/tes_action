@@ -18,9 +18,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "Get Tag Number"
-        run: echo ::set-output name=VERSION::$(echo "${{ github.event.inputs.version }}" | sed -r 's/[v]+//g')
+      - name: "Get Version Number"
+        run: echo ::set-output name=VERSION_NUMBER::$(echo "${{ github.event.inputs.version }}" | sed -r 's/[v]+//g')
         id: get_version
 
       - name: Echo ENV
-        run: echo "${{ steps.get_version.outputs.VERSION }}"
+        run: echo "${{ steps.get_version.outputs.VERSION_NUMBER }}"
