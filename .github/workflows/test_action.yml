@@ -19,4 +19,4 @@ jobs:
           fetch-depth: 0
 
       - name: Echo Version
-        run: echo "v1.7.30" | tr v _
+        run: echo "v1.7.30" | tr v 
